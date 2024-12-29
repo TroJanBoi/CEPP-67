@@ -1,9 +1,16 @@
 package main
 
 import (
-	"fmt"
+	"github.com/TroJanBoi/CEPP-67/services"
 )
 
 func main() {
-	fmt.Println("Hello World")
+
+	db, err := services.SetUpDB()
+
+	if err != nil {
+		panic(err)
+	}
+	app := services.InitializeRouter(db)
+	services.SetUpServer(app)
 }
