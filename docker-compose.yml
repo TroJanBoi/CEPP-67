@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: postgres
+      POSTGRES_DB: cepp-db
     volumes:
       - pg-volumes:/var/lib/postgresql/data
     restart: always
