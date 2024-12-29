@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5444:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - pg-volumes:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - cepp-network
+  web:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3200:3000"
+    restart: always
+    networks:
+      - cepp-network
+  be:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    ports:
+      - "9899:9898"
+    restart: always
+    depends_on:
+      - postgres
+    networks:
+      - cepp-network
+volumes:
+  pg-volumes:
+
+networks:
+  cepp-network:
