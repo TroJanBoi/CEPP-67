@@ -1,9 +1,12 @@
+"use client";
 
 const HomePage = () => {
     return (
-        <div>
-            <h1>Home Page</h1>
-        </div>
+       <div className="flex justify-center items-center h-screen">
+            <div className="relative bg-[url('../images/test.jpg')] bg-center bg-cover w-full h-full">
+
+            </div>
+       </div>
     );
 };
 
