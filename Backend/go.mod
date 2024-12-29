@@ -1,4 +1,4 @@
-module github.com/TroJanBoi/CEPP-67.git
+module github.com/TroJanBoi/CEPP-67
 
 go 1.21.0
 

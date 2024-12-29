@@ -1,12 +1,16 @@
 "use client";
 
+import { ReactFlow, Background, Controls } from '@xyflow/react';
+import '@xyflow/react/dist/style.css';
+
 const HomePage = () => {
     return (
-       <div className="flex justify-center items-center h-screen">
-            <div className="relative bg-[url('../images/test.jpg')] bg-center bg-cover w-full h-full">
-
-            </div>
-       </div>
+        <div className='w-screen h-screen'>
+            <ReactFlow>
+                <Background />
+                <Controls />
+            </ReactFlow>
+        </div>
     );
 };
 
