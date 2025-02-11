@@ -1,8 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import Board from "./_components/Board";
-// import { observer } from "./Game";
 const DndPage = () => {
 
     return (
